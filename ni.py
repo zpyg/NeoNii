@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
 from sys import argv
+from os import chdir
 from argparse import ArgumentParser
 from pathlib import Path
+# 切换工作目录
+WORK_DIR = Path(__file__).parent
+chdir(WORK_DIR)
 
 from PIL import Image
 
 from util import enc, dec
+
 
 
 args = argv[1::]
